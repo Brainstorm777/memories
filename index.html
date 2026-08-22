@@ -1,0 +1,566 @@
+﻿<!--saved from url=(0016)http://localhost-->
+<!DOCTYPE html >
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" dir="ltr">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title></title>
+		<style type="text/css">
+			* { padding: 0; margin: 0; border: 0; }
+			.modal { display: none; position: fixed; z-index: 1; padding-top: 2%; left: 0; top: 0; width: 100%; height: 100%; overflow: auto; background-color: rgb(0,0,0); background-color: rgba(0,0,0,0.4); }
+			.modal-content { background-color: #fefefe; margin: auto; padding: 5px 0px 20px 20px; border: 1px solid #888; width: 748px; height: 87%; min-height: 350px; }
+			#modalContent { border: 0; width: 100%; height: 98%; }
+			.modal-frame { border: 0; width: 100%; height: 99%; }
+			.close { color: #aaaaaa; float: right; font-size: 28px; font-weight: bold; margin-right: 10px; }
+			.close:hover, .close:focus { color: #000; text-decoration: none; cursor: pointer; }
+			.gbtn { float: left; margin-top: 8px; opacity: 0.7; width: 26px; height: 26px; background: no-repeat; }
+			.back { background: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNiIgaGVpZ2h0PSIyNiIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIj48cGF0aCBkPSJNMTIgMkM2LjQ3NyAyIDIgNi40NzcgMiAxMnM0LjQ3NyAxMCAxMCAxMCAxMC00LjQ3NyAxMC0xMFMxNy41MjMgMiAxMiAyem0wIDEuNWE4LjUgOC41IDAgMSAxIDAgMTcgOC41IDguNSAwIDAgMSAwLTE3em0uMzUzIDQuMDUzLS4wNzMtLjA4NGEuNzUuNzUgMCAwIDAtLjk3Ni0uMDcybC0uMDg0LjA3My00IDRhLjc1Ljc1IDAgMCAwLS4wNzIuOTc2bC4wNzIuMDg0IDQuMDAyIDRhLjc1Ljc1IDAgMCAwIDEuMTMzLS45NzZsLS4wNzMtLjA4NC0yLjcyMi0yLjcyaDYuNjkxYS43NS43NSAwIDAgMCAuNzQ0LS42NDhMMTcgMTJhLjc1Ljc1IDAgMCAwLS42NDgtLjc0M2wtLjEwMi0uMDA3SDkuNTZsMi43Mi0yLjcyYS43NS43NSAwIDAgMCAuMDczLS45NzZsLS4wNzMtLjA4NHoiIGZpbGw9IiMxNzRDNzIiLz48L3N2Zz4="); }
+			.tree { margin-left: 12px; background: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNiIgaGVpZ2h0PSIyNiIgdmlld0JveD0iMCAwIDI4IDI4IiBmaWxsPSJub25lIj48cGF0aCBkPSJNMTQgMmE0LjI1IDQuMjUgMCAwIDAtLjc1IDguNDM0djMuMDY4aC00LjVhMi4yNSAyLjI1IDAgMCAwLTIuMjUgMi4yNXYxLjgxNmE0LjI1IDQuMjUgMCAxIDAgMS41LS4wMDJWMTUuNzVhLjc1Ljc1IDAgMCAxIC43NS0uNzVoMTAuNWEuNzUuNzUgMCAwIDEgLjc1Ljc1djEuODE2YTQuMjUxIDQuMjUxIDAgMSAwIDEuNSAwVjE1Ljc1YTIuMjUgMi4yNSAwIDAgMC0yLjI1LTIuMjVoLTQuNXYtMy4wNjhBNC4yNTEgNC4yNTEgMCAwIDAgMTQgMS45OTh6bS0yLjc1IDQuMjVhMi43NSAyLjc1IDAgMSAxIDUuNSAwIDIuNzUgMi43NSAwIDAgMS01LjUgMHptOS41IDEyLjc1MmEyLjc1IDIuNzUgMCAxIDEgMCA1LjUgMi43NSAyLjc1IDAgMCAxIDAtNS41eiIgZmlsbD0iIzE3NEM3MiIvPjwvc3ZnPg=="); }
+			.tree:hover, .tree:focus,.back:hover, .back:focus { cursor: pointer; opacity: 1;  }
+			.s0 { stroke:none;fill:#92DDF9; }
+			.s1 { stroke:#707070;stroke-width:1px;stroke-linecap:square;fill:none; }
+			.s2 { stroke:none;fill:#FBD27A; }
+			.s3 { stroke:none;fill:#FFFFFF; }
+			.s4 { font-family:Verdana;font-size:9px;fill:#000000; }
+			.s5 { stroke:#707070;stroke-width:2px;stroke-linecap:square;fill:#707070; }
+			.s6 { stroke:#174C72;stroke-width:2px;stroke-linecap:square;fill:#174C72; }
+			.s7 { stroke:#707070;stroke-width:2px;stroke-linecap:square;fill:none; }
+			.s8 { stroke:none;fill:#C4C4C4; }
+			.s9 { stroke:none;fill:#E8E8E8; }
+			.s10 { font-family:Verdana;font-size:11px;fill:#000000; }
+			.s11 { font-family:Verdana;font-size:11px;fill:#000000;font-style:italic; }
+			.s12 { stroke:none;fill:#FFF7E5;fill-opacity:0.50; }
+			.s13 { font-family:Verdana;font-size:13px;fill:#000000; }
+			.po { cursor: pointer; }
+			.sh { filter: drop-shadow(3px 5px 2px rgba(0,0,0,0.4)); }
+			.da { stroke-dasharray:4,4; }
+			.rtl { direction: rtl; }
+			text { white-space: pre; }
+		</style>
+	</head>
+	<body>
+		<svg xmlns:svg="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="775" height="1219" id="svg0" data-root="g2817">
+			<rect id="rect2" class="s3" x="0" y="0" width="775" height="1219" />
+			<g id="g2811">
+				<rect id="rect0" class="s12" x="0" y="733" width="775" height="274" />
+				<rect id="rect1" class="s12" x="0" y="231" width="775" height="251" />
+				<g id="g2812" transform="translate(25,10)">
+					<g id="g2827">
+						<g id="g2829" transform="translate(0,502)">
+							<g id="g2830">
+								<g id="g2831">
+									<path id="l5" class="s5" d="M54 177v62" />
+									<g id="g2832" class="po" data-id="9">
+										<path id="p38" class="s0 sh" d="M0,0h109v177h-109Z" />
+										<g id="g2897">
+											<image id="i16" xlink:href="./index.html.files/img/i16.png" x="0" y="0" width="109" height="100" />
+											<text id="t93" class="s10" x="23" y="113">Валиуллин</text>
+											<text id="t94" class="s10" x="44" y="127">Рим</text>
+											<text id="t95" class="s10" x="17" y="141">Зайнуллович</text>
+											<text id="t96" class="s10" x="22" y="155">15.10.1954</text>
+											<text id="t97" class="s11" x="39" y="169">Тесть</text>
+										</g>
+										<path id="p39" class="s1" d="M0,0h109v177h-109Z" />
+									</g>
+								</g>
+								<g id="g2833" transform="translate(131,0)">
+									<path id="l6" class="s5" d="M48 191v48" />
+									<g id="g2834" class="po" data-id="10">
+										<path id="p40" class="s2 sh" d="M0,10c0,-5 5,-10 10,-10h76c5,0 10,5 10,10v171c0,5 -5,10 -10,10h-76c-5,0 -10,-5 -10,-10Z" />
+										<clipPath id="cp40">
+											<use xlink:href="#p40" />
+										</clipPath>
+										<g id="g2898" clip-path="url(#cp40)">
+											<image id="i17" xlink:href="./index.html.files/img/i17.jpeg" x="0" y="0" width="96" height="100" />
+											<text id="t98" class="s10" x="13" y="113">Валиуллина</text>
+											<text id="t99" class="s10" x="9" y="127">(Фаткуллина)</text>
+											<text id="t100" class="s10" x="23" y="141">Макмура</text>
+											<text id="t101" class="s10" x="9" y="155">Сайфулловна</text>
+											<text id="t102" class="s10" x="16" y="169">08.04.1956</text>
+											<text id="t103" class="s11" x="33" y="183">Тёща</text>
+										</g>
+										<path id="p41" class="s1" d="M0,10c0,-5 5,-10 10,-10h76c5,0 10,5 10,10v171c0,5 -5,10 -10,10h-76c-5,0 -10,-5 -10,-10Z" />
+									</g>
+								</g>
+							</g>
+						</g>
+					</g>
+					<g id="g2813" transform="translate(86,0)">
+						<g id="g2849">
+							<g id="g2850">
+								<path id="l22" class="s6" d="M85 88h22" />
+								<g id="g2853">
+									<g id="g2854" class="po" data-id="17">
+										<path id="p0" class="s0 sh" d="M0,0h85v177h-85Z" />
+										<g id="g2880">
+											<image id="i0" xlink:href="./index.html.files/img/i0.jpeg" x="5" y="0" width="75" height="100" />
+											<text id="t0" class="s10" x="8" y="113">Смольников</text>
+											<text id="t1" class="s10" x="22" y="127">Степан</text>
+											<text id="t2" class="s10" x="9" y="141">Степанович</text>
+											<text id="t3" class="s10" x="5" y="155">09.02.1915 –</text>
+											<text id="t4" class="s10" x="10" y="169">01.06.1980</text>
+										</g>
+										<path id="p1" class="s1" d="M0,0h85v177h-85Z" />
+									</g>
+								</g>
+								<g id="g2851" transform="translate(107,0)">
+									<path id="l19" class="s5" d="M42 191v60" />
+									<g id="g2852" class="po" data-id="16">
+										<path id="p2" class="s2 sh" d="M0,10c0,-5 5,-10 10,-10h65c5,0 10,5 10,10v171c0,5 -5,10 -10,10h-65c-5,0 -10,-5 -10,-10Z" />
+										<clipPath id="cp2">
+											<use xlink:href="#p2" />
+										</clipPath>
+										<g id="g2881" clip-path="url(#cp2)">
+											<image id="i1" xlink:href="./index.html.files/img/i1.jpeg" x="5" y="0" width="75" height="100" />
+											<text id="t5" class="s10" x="12" y="113">Репнякова</text>
+											<text id="t6" class="s10" x="28" y="127">Нина</text>
+											<text id="t7" class="s10" x="9" y="141">Васильевна</text>
+											<text id="t8" class="s10" x="5" y="155">27.01.1915 –</text>
+											<text id="t9" class="s10" x="10" y="169">12.04.1988</text>
+											<text id="t10" class="s11" x="7" y="183">Прабабушка</text>
+										</g>
+										<path id="p3" class="s1" d="M0,10c0,-5 5,-10 10,-10h65c5,0 10,5 10,10v171c0,5 -5,10 -10,10h-65c-5,0 -10,-5 -10,-10Z" />
+									</g>
+								</g>
+							</g>
+						</g>
+						<g id="g2845" transform="translate(107,251)">
+							<g id="g2846">
+								<g id="g2847">
+									<path id="l15" class="s5" d="M42 191v48" />
+									<g id="g2848" class="po" data-id="11">
+										<path id="p4" class="s0 sh" d="M0,0h85v191h-85Z" />
+										<g id="g2882">
+											<image id="i2" xlink:href="./index.html.files/img/i2.png" x="9" y="0" width="67" height="100" />
+											<text id="t11" class="s10" x="15" y="113">Репняков</text>
+											<text id="t12" class="s10" x="21" y="127">Михаил</text>
+											<text id="t13" class="s10" x="15" y="141">Петрович</text>
+											<text id="t14" class="s10" x="5" y="155">18.08.1935 –</text>
+											<text id="t15" class="s10" x="10" y="169">15.08.2007</text>
+											<text id="t16" class="s11" x="31" y="183">Дед</text>
+										</g>
+										<path id="p5" class="s1" d="M0,0h85v191h-85Z" />
+									</g>
+								</g>
+							</g>
+						</g>
+						<g id="g2835" transform="translate(163,502)">
+							<path id="l18" class="s5" d="M-14 -12h113" />
+							<g id="g2836">
+								<g id="g2837">
+									<path id="l17" class="s5" d="M40 -12v12" />
+									<path id="l9" class="s5" d="M40 177v62" />
+									<g id="g2838" class="po" data-id="3">
+										<path id="p6" class="s0 sh" d="M0,0h80v177h-80Z" />
+										<g id="g2883">
+											<image id="i3" xlink:href="./index.html.files/img/i3.png" x="5" y="0" width="69" height="100" />
+											<text id="t17" class="s10" x="13" y="113">Репняков</text>
+											<text id="t18" class="s10" x="18" y="127">Михаил</text>
+											<text id="t19" class="s10" x="5" y="141">Михайлович</text>
+											<text id="t20" class="s10" x="8" y="155">30.10.1958</text>
+											<text id="t21" class="s11" x="26" y="169">Отец</text>
+										</g>
+										<path id="p7" class="s1" d="M0,0h80v177h-80Z" />
+									</g>
+								</g>
+							</g>
+						</g>
+						<g id="g2814" transform="translate(7,753)">
+							<path id="l14" class="s5" d="M196 -12h286" />
+							<path id="l8" class="s5" d="M-39 -12h125" />
+							<g id="g2815">
+								<path id="l1" class="s5" d="M123 104v158" />
+								<path id="l0" class="s6" d="M90 104h66" />
+								<g id="g2825" transform="translate(0,23)">
+									<path id="l7" class="s5" d="M45 -35v35" />
+									<g id="g2826" class="po" data-id="2">
+										<path id="p14" class="s2 sh" d="M0,10c0,-5 5,-10 10,-10h70c5,0 10,5 10,10v171c0,5 -5,10 -10,10h-70c-5,0 -10,-5 -10,-10Z" />
+										<clipPath id="cp14">
+											<use xlink:href="#p14" />
+										</clipPath>
+										<g id="g2887" clip-path="url(#cp14)">
+											<image id="i7" xlink:href="./index.html.files/img/i7.png" x="0" y="0" width="90" height="100" />
+											<text id="t40" class="s10" x="15" y="113">Репнякова</text>
+											<text id="t41" class="s10" x="5" y="127">(Валиуллина)</text>
+											<text id="t42" class="s10" x="21" y="141">Эльвина</text>
+											<text id="t43" class="s10" x="21" y="155">Римовна</text>
+											<text id="t44" class="s10" x="13" y="169">20.02.1984</text>
+											<text id="t45" class="s11" x="29" y="183">Жена</text>
+										</g>
+										<path id="p15" class="s1" d="M0,10c0,-5 5,-10 10,-10h70c5,0 10,5 10,10v171c0,5 -5,10 -10,10h-70c-5,0 -10,-5 -10,-10Z" />
+									</g>
+								</g>
+								<g id="g2816" transform="translate(148,0)">
+									<path id="l11" class="s5" d="M69 -12v20" />
+									<g id="g2817" class="po" data-id="1">
+										<path id="p16" class="s0 sh" d="M8,35c0,-3.8 3,-3.9 7,-3.9 4,0 8.4,-2.1 7.8,-6.2 -0.2,-1.1 -1.1,-3.3 -2.1,-4.2 1,1 3.3,1.8 4.4,2.1 3.9,0.8 5.9,-3.2 5.9,-7.1 0,-3.9 0,-7.7 4,-7.7h26c6,0 8,-2 8,-8 0,6 2,8 8,8h27c3.8,0 3.9,3 3.9,7 0,4 2.1,8.4 6.2,7.8 1.1,-0.2 3.3,-1.1 4.2,-2.1 -1,1 -1.8,3.3 -2.1,4.4 -0.8,3.9 3.2,5.9 7.1,5.9 3.9,0 7.7,0 7.7,4v61c0,6 2,8 8,8 -6,0 -8,2 -8,8v62c0,3.8 -3,3.9 -7,3.9 -4,0 -8.4,2.1 -7.8,6.2 0.2,1.1 1.1,3.3 2.1,4.2 -1,-1 -3.3,-1.8 -4.4,-2.1 -3.9,-0.8 -5.9,3.2 -5.9,7.1 0,3.9 0,7.7 -4,7.7h-27c-6,0 -8,2 -8,8 0,-6 -2,-8 -8,-8h-26c-3.8,0 -3.9,-3 -3.9,-7 0,-4 -2.1,-8.4 -6.2,-7.8 -1.1,0.2 -3.3,1.1 -4.2,2.1 1,-1 1.8,-3.3 2.1,-4.4 0.8,-3.9 -3.2,-5.9 -7.1,-5.9 -3.9,0 -7.7,0 -7.7,-4v-62c0,-6 -2,-8 -8,-8 6,0 8,-2 8,-8Z" />
+										<clipPath id="cp16">
+											<use xlink:href="#p16" />
+										</clipPath>
+										<g id="g2888" clip-path="url(#cp16)">
+											<image id="i8" xlink:href="./index.html.files/img/i8.png" x="23" y="23" width="93" height="100" />
+											<text id="t46" class="s10" x="42" y="136">Репняков</text>
+											<text id="t47" class="s10" x="46" y="150">Евгений</text>
+											<text id="t48" class="s10" x="34" y="164">Михайлович</text>
+											<text id="t49" class="s10" x="37" y="178">20.02.1984</text>
+										</g>
+										<path id="p17" class="s1" d="M8,35c0,-3.8 3,-3.9 7,-3.9 4,0 8.4,-2.1 7.8,-6.2 -0.2,-1.1 -1.1,-3.3 -2.1,-4.2 1,1 3.3,1.8 4.4,2.1 3.9,0.8 5.9,-3.2 5.9,-7.1 0,-3.9 0,-7.7 4,-7.7h26c6,0 8,-2 8,-8 0,6 2,8 8,8h27c3.8,0 3.9,3 3.9,7 0,4 2.1,8.4 6.2,7.8 1.1,-0.2 3.3,-1.1 4.2,-2.1 -1,1 -1.8,3.3 -2.1,4.4 -0.8,3.9 3.2,5.9 7.1,5.9 3.9,0 7.7,0 7.7,4v61c0,6 2,8 8,8 -6,0 -8,2 -8,8v62c0,3.8 -3,3.9 -7,3.9 -4,0 -8.4,2.1 -7.8,6.2 0.2,1.1 1.1,3.3 2.1,4.2 -1,-1 -3.3,-1.8 -4.4,-2.1 -3.9,-0.8 -5.9,3.2 -5.9,7.1 0,3.9 0,7.7 -4,7.7h-27c-6,0 -8,2 -8,8 0,-6 -2,-8 -8,-8h-26c-3.8,0 -3.9,-3 -3.9,-7 0,-4 -2.1,-8.4 -6.2,-7.8 -1.1,0.2 -3.3,1.1 -4.2,2.1 1,-1 1.8,-3.3 2.1,-4.4 0.8,-3.9 -3.2,-5.9 -7.1,-5.9 -3.9,0 -7.7,0 -7.7,-4v-62c0,-6 -2,-8 -8,-8 6,0 8,-2 8,-8Z" />
+										<path id="p18" class="s1" d="M14.3,12.8 a2.3,2.3 0 0 1 2.5,1.9 26.7,26.7 0 0 0 1.2,3.4 19.9,19.9 0 0 0 -3.4,-0.8 2.3,2.3 0 0 1 -2.2,-2.1 2.2,2.2 0 0 1 1.9,-2.4 m4,13.2 c-0.5,1 -2.9,1.9 -4.7,0.6 -1.8,-1.3 -1.6,-3.4 -0.6,-5 1.6,-2.6 5.8,-2.6 8.2,-0.5 -2.8,-2.6 -2.1,-7.9 1.1,-9.1 1.8,-0.7 3.9,-0.4 4.9,1.6 1,2 -0.3,4.2 -1.5,4.5" />
+										<path id="p19" class="s1" d="M126.2,14.3 a2.3,2.3 0 0 1 -1.9,2.5 26.7,26.7 0 0 0 -3.4,1.2 19.9,19.9 0 0 0 0.8,-3.4 2.3,2.3 0 0 1 2.1,-2.2 2.2,2.2 0 0 1 2.4,1.9 m-13.2,4 c-1,-0.5 -1.9,-2.9 -0.6,-4.7 1.3,-1.8 3.4,-1.6 5,-0.6 2.6,1.6 2.6,5.8 0.5,8.2 2.6,-2.8 7.9,-2.1 9.1,1.1 0.7,1.8 0.4,3.9 -1.6,4.9 -2,1 -4.2,-0.3 -4.5,-1.5" />
+										<path id="p20" class="s1" d="M124.7,196.2 a-2.3,-2.3 0 0 1 -2.5,-1.9 -26.7,-26.7 0 0 0 -1.2,-3.4 -19.9,-19.9 0 0 0 3.4,0.8 -2.3,-2.3 0 0 1 2.2,2.1 -2.2,-2.2 0 0 1 -1.9,2.4 m-4,-13.2 c0.5,-1 2.9,-1.9 4.7,-0.6 1.8,1.3 1.6,3.4 0.6,5 -1.6,2.6 -5.8,2.6 -8.2,0.5 2.8,2.6 2.1,7.9 -1.1,9.1 -1.8,0.7 -3.9,0.4 -4.9,-1.6 -1,-2 0.3,-4.2 1.5,-4.5" />
+										<path id="p21" class="s1" d="M12.8,194.7 a2.3,2.3 0 0 1 1.9,-2.5 26.7,26.7 0 0 0 3.4,-1.2 19.9,19.9 0 0 0 -0.8,3.4 2.3,2.3 0 0 1 -2.1,2.2 2.2,2.2 0 0 1 -2.4,-1.9 m13.2,-4 c1,0.5 1.9,2.9 0.6,4.7 -1.3,1.8 -3.4,1.6 -5,0.6 -2.6,-1.6 -2.6,-5.8 -0.5,-8.2 -2.6,2.8 -7.9,2.1 -9.1,-1.1 -0.7,-1.8 -0.4,-3.9 1.6,-4.9 2,-1 4.2,0.3 4.5,1.5" />
+									</g>
+								</g>
+								<g id="g2899" transform="translate(97,88)">
+									<text id="t104" class="s4" x="0" y="9">15.07.2006</text>
+								</g>
+							</g>
+							<g id="g2839" transform="translate(299,0)">
+								<g id="g2840" transform="translate(0,23)">
+									<path id="l12" class="s5" d="M47 -35v35" />
+									<g id="g2841" class="po" data-id="5">
+										<path id="p26" class="s0 sh" d="M0,0h94v177h-94Z" />
+										<g id="g2891">
+											<image id="i11" xlink:href="./index.html.files/img/i11.png" x="0" y="0" width="94" height="100" />
+											<text id="t60" class="s10" x="20" y="113">Репняков</text>
+											<text id="t61" class="s10" x="23" y="127">Виталий</text>
+											<text id="t62" class="s10" x="12" y="141">Михайлович</text>
+											<text id="t63" class="s10" x="15" y="155">02.02.1986</text>
+											<text id="t64" class="s11" x="34" y="169">Брат</text>
+										</g>
+										<path id="p27" class="s1" d="M0,0h94v177h-94Z" />
+									</g>
+								</g>
+							</g>
+							<g id="g2842" transform="translate(405,0)">
+								<g id="g2843" transform="translate(0,23)">
+									<path id="l13" class="s5" d="M45 -35v35" />
+									<g id="g2844" class="po" data-id="6">
+										<path id="p28" class="s0 sh" d="M0,0h91v177h-91Z" />
+										<g id="g2892">
+											<image id="i12" xlink:href="./index.html.files/img/i12.jpeg" x="0" y="0" width="91" height="100" />
+											<text id="t65" class="s10" x="18" y="113">Репняков</text>
+											<text id="t66" class="s10" x="15" y="127">Александр</text>
+											<text id="t67" class="s10" x="10" y="141">Михайлович</text>
+											<text id="t68" class="s10" x="13" y="155">07.04.1991</text>
+											<text id="t69" class="s11" x="32" y="169">Брат</text>
+										</g>
+										<path id="p29" class="s1" d="M0,0h91v177h-91Z" />
+									</g>
+								</g>
+							</g>
+						</g>
+						<g id="g2818" transform="translate(38,1027)">
+							<path id="l4" class="s5" d="M42 -12h101" />
+							<g id="g2819">
+								<g id="g2820">
+									<path id="l2" class="s5" d="M42 -12v12" />
+									<g id="g2821" class="po" data-id="7">
+										<path id="p22" class="s0 sh" d="M0,0h85v177h-85Z" />
+										<g id="g2889">
+											<image id="i9" xlink:href="./index.html.files/img/i9.png" x="0" y="0" width="85" height="100" />
+											<text id="t50" class="s10" x="15" y="113">Репняков</text>
+											<text id="t51" class="s10" x="19" y="127">Алексей</text>
+											<text id="t52" class="s10" x="10" y="141">Евгеньевич</text>
+											<text id="t53" class="s10" x="10" y="155">09.05.2008</text>
+											<text id="t54" class="s11" x="31" y="169">Сын</text>
+										</g>
+										<path id="p23" class="s1" d="M0,0h85v177h-85Z" />
+									</g>
+								</g>
+							</g>
+							<g id="g2822" transform="translate(97,0)">
+								<g id="g2823">
+									<path id="l3" class="s5" d="M46 -12v12" />
+									<g id="g2824" class="po" data-id="8">
+										<path id="p24" class="s2 sh" d="M0,10c0,-5 5,-10 10,-10h72c5,0 10,5 10,10v157c0,5 -5,10 -10,10h-72c-5,0 -10,-5 -10,-10Z" />
+										<clipPath id="cp24">
+											<use xlink:href="#p24" />
+										</clipPath>
+										<g id="g2890" clip-path="url(#cp24)">
+											<image id="i10" xlink:href="./index.html.files/img/i10.png" x="0" y="0" width="92" height="100" />
+											<text id="t55" class="s10" x="16" y="113">Репнякова</text>
+											<text id="t56" class="s10" x="31" y="127">Нина</text>
+											<text id="t57" class="s10" x="13" y="141">Евгеньевна</text>
+											<text id="t58" class="s10" x="14" y="155">17.06.2011</text>
+											<text id="t59" class="s11" x="32" y="169">Дочь</text>
+										</g>
+										<path id="p25" class="s1" d="M0,10c0,-5 5,-10 10,-10h72c5,0 10,5 10,10v157c0,5 -5,10 -10,10h-72c-5,0 -10,-5 -10,-10Z" />
+									</g>
+								</g>
+							</g>
+						</g>
+						<g id="g2859" transform="translate(264,0)">
+							<g id="g2860">
+								<g id="g2861">
+									<path id="l23" class="s5" d="M54 191v48" />
+									<g id="g2862" class="po" data-id="18">
+										<path id="p8" class="s2 sh" d="M0,10c0,-5 5,-10 10,-10h89c5,0 10,5 10,10v171c0,5 -5,10 -10,10h-89c-5,0 -10,-5 -10,-10Z" />
+										<clipPath id="cp8">
+											<use xlink:href="#p8" />
+										</clipPath>
+										<g id="g2884" clip-path="url(#cp8)">
+											<image id="i4" xlink:href="./index.html.files/img/i4.jpeg" x="17" y="0" width="75" height="100" />
+											<text id="t22" class="s10" x="5" y="113">Крашенинникова</text>
+											<text id="t23" class="s10" x="23" y="127">Ефросинья</text>
+											<text id="t24" class="s10" x="19" y="141">Михайловна</text>
+											<text id="t25" class="s10" x="17" y="155">14.01.1914 –</text>
+											<text id="t26" class="s10" x="22" y="169">09.05.1993</text>
+											<text id="t27" class="s11" x="19" y="183">Прабабушка</text>
+										</g>
+										<path id="p9" class="s1" d="M0,10c0,-5 5,-10 10,-10h89c5,0 10,5 10,10v171c0,5 -5,10 -10,10h-89c-5,0 -10,-5 -10,-10Z" />
+									</g>
+								</g>
+							</g>
+						</g>
+						<g id="g2855" transform="translate(214,251)">
+							<path id="l26" class="s5" d="M48 -12h112" />
+							<g id="g2856">
+								<g id="g2857">
+									<path id="l24" class="s5" d="M48 -12v12" />
+									<path id="l16" class="s5" d="M48 191v48" />
+									<g id="g2858" class="po" data-id="12">
+										<path id="p10" class="s2 sh" d="M0,10c0,-5 5,-10 10,-10h77c5,0 10,5 10,10v171c0,5 -5,10 -10,10h-77c-5,0 -10,-5 -10,-10Z" />
+										<clipPath id="cp10">
+											<use xlink:href="#p10" />
+										</clipPath>
+										<g id="g2885" clip-path="url(#cp10)">
+											<image id="i5" xlink:href="./index.html.files/img/i5.png" x="15" y="0" width="66" height="100" />
+											<text id="t28" class="s10" x="18" y="113">Репнякова</text>
+											<text id="t29" class="s10" x="30" y="127">Фаина</text>
+											<text id="t30" class="s10" x="5" y="141">Александровна</text>
+											<text id="t31" class="s10" x="11" y="155">08.07.1936 –</text>
+											<text id="t32" class="s10" x="16" y="169">01.09.1998</text>
+											<text id="t33" class="s11" x="23" y="183">Бабушка</text>
+										</g>
+										<path id="p11" class="s1" d="M0,10c0,-5 5,-10 10,-10h77c5,0 10,5 10,10v171c0,5 -5,10 -10,10h-77c-5,0 -10,-5 -10,-10Z" />
+									</g>
+								</g>
+							</g>
+							<g id="g2863" transform="translate(109,0)">
+								<g id="g2864">
+									<path id="l25" class="s5" d="M51 -12v12" />
+									<g id="g2865" class="po" data-id="19">
+										<path id="p12" class="s0 sh" d="M0,0h102v191h-102Z" />
+										<g id="g2886">
+											<image id="i6" xlink:href="./index.html.files/img/i6.jpeg" x="13" y="0" width="75" height="100" />
+											<text id="t34" class="s10" x="5" y="113">Крашенинников</text>
+											<text id="t35" class="s10" x="21" y="127">Станислав</text>
+											<text id="t36" class="s10" x="7" y="141">Александрович</text>
+											<text id="t37" class="s10" x="13" y="155">06.10.1938 –</text>
+											<text id="t38" class="s10" x="19" y="169">03.01.2000</text>
+											<text id="t39" class="s11" x="7" y="183">2-юродный дед</text>
+										</g>
+										<path id="p13" class="s1" d="M0,0h102v191h-102Z" />
+									</g>
+								</g>
+							</g>
+						</g>
+						<g id="g2874" transform="translate(447,0)">
+							<g id="g2875">
+								<path id="l33" class="s6" d="M85 40h22" />
+								<g id="g2876">
+									<path id="l30" class="s5" d="M42 191v60" />
+									<g id="g2877" class="po" data-id="13">
+										<path id="p30" class="s0 sh" d="M0,0h85v191h-85Z" />
+										<g id="g2893">
+											<image id="i13" xlink:href="./index.html.files/img/i13.png" x="9" y="0" width="67" height="100" />
+											<text id="t70" class="s10" x="18" y="113">Романов</text>
+											<text id="t71" class="s10" x="21" y="127">Михаил</text>
+											<text id="t72" class="s10" x="15" y="141">Иванович</text>
+											<text id="t73" class="s10" x="5" y="155">10.07.1897 –</text>
+											<text id="t74" class="s10" x="10" y="169">05.08.1982</text>
+											<text id="t75" class="s11" x="21" y="183">Прадед</text>
+										</g>
+										<path id="p31" class="s1" d="M0,0h85v191h-85Z" />
+									</g>
+								</g>
+								<g id="g2878" transform="translate(107,0)">
+									<g id="g2879" class="po" data-id="15">
+										<path id="p32" class="s2 sh" d="M0,10c0,-5 5,-10 10,-10h65c5,0 10,5 10,10v60c0,5 -5,10 -10,10h-65c-5,0 -10,-5 -10,-10Z" />
+										<clipPath id="cp32">
+											<use xlink:href="#p32" />
+										</clipPath>
+										<g id="g2894" clip-path="url(#cp32)">
+											<text id="t76" class="s10" x="13" y="16">Шакурова</text>
+											<text id="t77" class="s10" x="28" y="30">Анна</text>
+											<text id="t78" class="s10" x="5" y="44">Евдокимовна</text>
+											<text id="t79" class="s10" x="5" y="58">14.02.1911 –</text>
+											<text id="t80" class="s10" x="10" y="72">07.02.1981</text>
+										</g>
+										<path id="p33" class="s1" d="M0,10c0,-5 5,-10 10,-10h65c5,0 10,5 10,10v60c0,5 -5,10 -10,10h-65c-5,0 -10,-5 -10,-10Z" />
+									</g>
+								</g>
+							</g>
+						</g>
+						<g id="g2870" transform="translate(447,251)">
+							<g id="g2871">
+								<g id="g2872">
+									<path id="l27" class="s5" d="M42 191v60" />
+									<g id="g2873" class="po" data-id="14">
+										<path id="p34" class="s2 sh" d="M0,10c0,-5 5,-10 10,-10h65c5,0 10,5 10,10v171c0,5 -5,10 -10,10h-65c-5,0 -10,-5 -10,-10Z" />
+										<clipPath id="cp34">
+											<use xlink:href="#p34" />
+										</clipPath>
+										<g id="g2895" clip-path="url(#cp34)">
+											<image id="i14" xlink:href="./index.html.files/img/i14.png" x="7" y="0" width="71" height="100" />
+											<text id="t81" class="s10" x="7" y="113">Авилушкина</text>
+											<text id="t82" class="s10" x="28" y="127">Вера</text>
+											<text id="t83" class="s10" x="7" y="141">Михайловна</text>
+											<text id="t84" class="s10" x="5" y="155">10.08.1930 –</text>
+											<text id="t85" class="s10" x="19" y="169">05.2003</text>
+											<text id="t86" class="s11" x="17" y="183">Бабушка</text>
+										</g>
+										<path id="p35" class="s1" d="M0,10c0,-5 5,-10 10,-10h65c5,0 10,5 10,10v171c0,5 -5,10 -10,10h-65c-5,0 -10,-5 -10,-10Z" />
+									</g>
+								</g>
+							</g>
+						</g>
+						<g id="g2866" transform="translate(438,502)">
+							<g id="g2867">
+								<g id="g2868">
+									<path id="l10" class="s5" d="M51 191v48" />
+									<g id="g2869" class="po" data-id="4">
+										<path id="p36" class="s2 sh" d="M0,10c0,-5 5,-10 10,-10h82c5,0 10,5 10,10v171c0,5 -5,10 -10,10h-82c-5,0 -10,-5 -10,-10Z" />
+										<clipPath id="cp36">
+											<use xlink:href="#p36" />
+										</clipPath>
+										<g id="g2896" clip-path="url(#cp36)">
+											<image id="i15" xlink:href="./index.html.files/img/i15.png" x="0" y="0" width="102" height="100" />
+											<text id="t87" class="s10" x="21" y="113">Репнякова</text>
+											<text id="t88" class="s10" x="10" y="127">(Авилушкина)</text>
+											<text id="t89" class="s10" x="26" y="141">Надежда</text>
+											<text id="t90" class="s10" x="24" y="155">Егоровна</text>
+											<text id="t91" class="s10" x="19" y="169">22.07.1959</text>
+											<text id="t92" class="s11" x="37" y="183">Мать</text>
+										</g>
+										<path id="p37" class="s1" d="M0,10c0,-5 5,-10 10,-10h82c5,0 10,5 10,10v171c0,5 -5,10 -10,10h-82c-5,0 -10,-5 -10,-10Z" />
+									</g>
+								</g>
+							</g>
+						</g>
+					</g>
+				</g>
+			</g>
+			<script type="text/javascript">//<![CDATA[
+navTo = function() {
+	if (this.dataset.link.match(/^(?!https?:\/\/).+?\.html?$/i))
+		window.location.href = this.dataset.link;
+	else
+		window.open(this.dataset.link, '_blank');
+};
+var a = document.querySelectorAll('[data-link]');
+for(var i = 0; i < a.length; i++) a[i].addEventListener('click', navTo);
+a = undefined;
+function scrollToView(e){
+	if(typeof e.scrollIntoView != 'undefined')
+        e.scrollIntoView({block: "center", inline: "center"});
+	else
+	{
+		var r = e.getBoundingClientRect()
+		window.scrollTo({ top: window.pageYOffset + r.top - window.innerHeight / 2, left: window.pageXOffset + r.left - window.innerWidth / 2})
+	}
+}
+function scrollToViewTop(e){
+	if(typeof e.scrollIntoView != 'undefined')
+        e.scrollIntoView(true);
+	else{
+		var r = e.getBoundingClientRect()
+		window.scrollTo({ top: window.pageYOffset + r.top})
+	}
+}
+jumpTo = function(){ var e = document.getElementById(this.dataset.ref); e && scrollToView(e); }
+jumpToTop = function(){ var e = document.getElementById(this.dataset.ref); e && scrollToViewTop(e); }
+var _tmp;
+a = document.querySelectorAll('[data-ref]');
+for(var i = 0; i < a.length; i++){
+	if( a[i].dataset.ref.match( /^[0-9]/ ) ) {
+		_tmp = document.querySelector('[data-id="' + a[i].dataset.ref + '"]')
+		if(_tmp){
+            a[i].dataset.ref = _tmp.id;
+		    a[i].addEventListener('click', jumpToTop);
+        }
+	}else a[i].addEventListener('click', jumpTo);
+}
+a = undefined;
+
+window.addEventListener('DOMContentLoaded', function(){
+	var svg = document.getElementById('svg0');
+	var h = window.location.hash;
+	var e = document.getElementById(h ? h.split('?')[0].slice(2) : svg.dataset.root);
+	e && setTimeout(function () {scrollToView(e);}, 200);
+});
+var p = null;
+function startDrag(e, x, y) { if(!e.ctrlKey) return; p = { x: x, y: y }; }
+function endDrag(e) { p = null; }
+function onMove(e, x, y) {
+	if(p) {
+		if(!e.ctrlKey){
+			p = null;
+		} else {
+			window.scrollTo({ top: window.pageYOffset-(y-p.y), left: window.pageXOffset-(x-p.x) });
+			e.preventDefault();
+		}
+	}
+}
+document.addEventListener('mouseup', endDrag, false );
+document.addEventListener('mousedown', function(e){ startDrag(e, e.pageX, e.pageY) }, false );
+document.addEventListener('mousemove', function(e){ onMove(e, e.pageX, e.pageY) }, false );
+
+var currpos = 0;
+var currgid = 0;
+var modal,mc,mcw;
+function setH(id){ window.location.hash = 'g'+id; }
+function updateModalHeight(fh) {
+	if(modal.clientHeight * 0.87 < fh + 40 ) {
+		mcw.style.height = '87%';
+		mc.style.height = '98%';
+	}else{
+		mcw.style.height = 'auto';
+		mc.style.height = fh + 40 + 'px';
+	}
+}
+window.addEventListener('DOMContentLoaded', function (){
+	modal = document.getElementById('myModal');
+	mc = document.getElementById('modalContent');
+	mcw = document.getElementById('modalContentWrap');
+	window.addEventListener('message', function (event) {
+		if (event.data.event_id === 'gmsg'){ currgid = event.data.data; setH(currgid); }
+		if (event.data.event_id === 'gclose') closemodal();
+		if (event.data.event_id === 'gheight') updateModalHeight(event.data.data);
+	});
+	window.addEventListener('keydown', function(e){ if( (e.keyCode && e.keyCode === 27) || ( e.code && e.code === "Escape") ) closemodal(); }, false );
+
+	var navToPerson = function () {
+		mc.innerHTML = '<iframe id="idetail" onload="currpos+=1;" src="index.html.files/p' + this.dataset.id + '.html?v=1" class="modal-frame"></iframe>';
+		modal.style.display = 'block';
+		setH(this.id);
+	}
+	function closemodal() { modal.style.display = "none"; currpos = 0; }
+	var spanback = document.getElementsByClassName("back")[0];
+	spanback.onclick = function () { if (currpos > 1) { window.history.back(); currpos -= 2; } else closemodal(); }
+	var spanx = document.getElementsByClassName("close")[0];
+	spanx.onclick = closemodal;
+	var spantree = document.getElementsByClassName("tree")[0];
+	spantree.onclick = function () {
+		closemodal();
+		var e = document.getElementById(currgid);
+        e && scrollToView(e);
+        setH(currgid);
+	}
+	window.onclick = function (event) { if (event.target === modal) closemodal(); }
+	var a = document.querySelectorAll('[data-id]');
+	for(var i = 0; i < a.length; i++) a[i].addEventListener('click', navToPerson);
+	a = undefined;
+});
+//]]></script>
+		</svg>
+		<div id="myModal" class="modal">
+			<div class="modal-content" id="modalContentWrap">
+				<div class="gbtn back" title="Назад"></div>
+				<div class="gbtn tree" title="Перейти в древо"></div>
+				<span class="close">&times;</span>
+				<div id="modalContent"></div>
+			</div>
+		</div>
+	</body>
+</html>
