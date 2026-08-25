@@ -457,7 +457,8 @@
 					</g>
 				</g>
 			</g>
-			<script type="text/javascript">//<![CDATA[
+
+<script type="text/javascript">//<![CDATA[
 navTo = function() {
 	if (this.dataset.link.match(/^(?!https?:\/\/).+?\.html?$/i))
 		window.location.href = this.dataset.link;
@@ -543,15 +544,53 @@ window.addEventListener('DOMContentLoaded', function (){
 		if (event.data.event_id === 'gmsg'){ currgid = event.data.data; setH(currgid); }
 		if (event.data.event_id === 'gclose') closemodal();
 		if (event.data.event_id === 'gheight') updateModalHeight(event.data.data);
+		
+		// Обработка открытия Google Спутника
+		if (event.data.event_id === 'gmap'){
+			var mapUrl = 'https://maps.google.com/maps?q=' + event.data.coords + '+(' + encodeURIComponent(event.data.title) + ')&t=k&z=18&output=embed';
+			
+			// Растягиваем внешнюю обертку окна
+			mcw.style.width = '90vw';
+			mcw.style.height = '85vh';
+			
+			// Настраиваем внутренний контейнер на flexbox для корректного заклинивания iframe
+			mc.style.height = '100%';
+			mc.style.display = 'flex';
+			mc.style.flexDirection = 'column';
+			mc.style.padding = '0';
+			mc.style.overflow = 'hidden';
+			
+			mc.innerHTML = '<div style="padding:10px 15px; font-weight:bold; font-family:Verdana; font-size:13px; background:#fff; border-bottom:1px solid #ccc; flex-shrink:0;">' + event.data.title + '</div>' +
+						   '<iframe style="width:100%; height:100%; flex-grow:1; border:0;" frameborder="0" src="' + mapUrl + '" allowfullscreen></iframe>';
+			modal.style.display = 'block';
+		}
 	});
 	window.addEventListener('keydown', function(e){ if( (e.keyCode && e.keyCode === 27) || ( e.code && e.code === "Escape") ) closemodal(); }, false );
 
 	var navToPerson = function () {
+		// Сбрасываем кастомные флекс-стили карты для корректного отображения обычной анкеты
+		mcw.style.width = '';
+		mcw.style.height = '';
+		mc.style.display = '';
+		mc.style.flexDirection = '';
+		mc.style.padding = '';
+		mc.style.overflow = '';
+		
 		mc.innerHTML = '<iframe id="idetail" onload="currpos+=1;" src="index.html.files/p' + this.dataset.id + '.html?v=1" class="modal-frame"></iframe>';
 		modal.style.display = 'block';
 		setH(this.id);
 	}
-	function closemodal() { modal.style.display = "none"; currpos = 0; }
+	function closemodal() { 
+		modal.style.display = "none"; 
+		currpos = 0; 
+		// Сбрасываем все стили при закрытии окна
+		mcw.style.width = '';
+		mcw.style.height = '';
+		mc.style.display = '';
+		mc.style.flexDirection = '';
+		mc.style.padding = '';
+		mc.style.overflow = '';
+	}
 	var spanback = document.getElementsByClassName("back")[0];
 	spanback.onclick = function () { if (currpos > 1) { window.history.back(); currpos -= 2; } else closemodal(); }
 	var spanx = document.getElementsByClassName("close")[0];
